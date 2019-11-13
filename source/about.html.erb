@@ -1,0 +1,48 @@
+---
+title: About
+---
+
+<header class="header header-img header-img-about header-pad-sm bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path(data.pages.about.header.image) %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h1 txt-white"><%= data.pages.about.header.title %></h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section-pad section-pad-sm bg-clip chevron-offset-border-inv chevron-offset-border">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9">
+        <p class="text-center"><%= data.pages.about.bio %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-bg-img section-pad bg-clip bg-clip-inverse" style="background-image: url(images/header-img.jpg)">
+  <div class='container'>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <%= data.pages.about.body %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad bg-clip">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="txt-black font-italic text-center mb-3">Louie and Shelley lead:</h2>
+        <ul class="p-0 flex row">
+          <% data.pages.about.logos.each do | logo | %>
+            <li class="px-4 mt-3 list-inline w-sm-100"><a href="<%= logo.url %>" class=""><img src="<%= logo.image %>"></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

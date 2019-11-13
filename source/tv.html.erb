@@ -1,0 +1,27 @@
+---
+title: TV
+---
+<header class="header header-img header-img-about header-pad-sm bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path data.pages.tv.header.image %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h1 txt-white"><%= data.pages.tv.header.title %></h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section-pad section-pad-lg bg-clip chevron-offset-border-dbl">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h2 txt-black text-center font-italic mb-5"><%= data.pages.tv.body %></h1>
+        <% data.pages.tv.events.each do |e| %>
+          <div class="col-12">
+            <%= image_tag e.image, class: 'mb-4' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

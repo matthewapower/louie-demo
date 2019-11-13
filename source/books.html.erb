@@ -1,0 +1,48 @@
+---
+title: Books
+---
+<% data.featured_books.each_with_index do | book, index | %>
+  <section class="section section-pad section-pad-lg section-bg-img bg-clip <%= 'bg-clip-inverse' if index == 0 %>" style="background-image: url(<%= image_path book[1].header.bg_image %>)">
+    <div class='container'>
+      <div class="row justify-content-center align-items-center <%= 'flex-row-reverse' if index %2 == 1 %>">
+        <div class="col-md-4 col-6">
+          <%= image_tag book[1].header.image %>
+        </div>
+        <div class="col-md-7 col-sm-12 d-flex flex-column justify-content-center">
+          <div class="text-center text-md-left <%= 'text-md-right' if index %2 == 1 %>">
+            <h2 class="txt-black"><%= book[1].header.title %></h2>
+            <p class="txt-black"><%= book[1].header.body %></p>
+            <%= link_to 'Learn More', '/books/' + book[0].parameterize + '/', class: 'btn btn-primary btn-outline' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<section class="section section-pad section-pad-lg bg-clip">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <h2 class="text-center mb-4 txt-black">More Books</h2>
+        <div class="glide glide-overflow-view">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <% data.pages.books.carousel.each do | slide | %>
+                <li class="glide__slide d-flex justify-content-center align-items-center flex-column text-black">
+                  <%= image_tag slide.image, class: 'mb-4 mh-md'%>
+                  <p><%= slide.title %></p>
+                  <a class="btn btn-outline" href="<%= slide.url %>">More</a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

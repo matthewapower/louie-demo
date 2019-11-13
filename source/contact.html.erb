@@ -1,0 +1,50 @@
+---
+title: Contact
+---
+
+<header class="header header-img header-img-about header-pad-sm bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path data.pages.contact.header.image %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h1 txt-white"><%= data.pages.contact.header.title %></h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section-pad section-pad-lg bg-clip chevron-offset-border chevron-offset-border-inv">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center mb-3"><%= data.pages.contact.title %></h1>
+        <p class="text-center"><%= data.pages.contact.body %></p>
+        <%= data.pages.contact.embed %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-bg-img section-pad section-pad-lg bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path data.pages.contact.section_bg %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="p text-white text-center mb-3"><%= data.pages.contact.subhead %></h2>
+        <h2 class="p text-white text-center">You can also reach us at:</h2>
+        <p class="h2 text-white text-center">PO Box 14145, Atlanta, GA 30324</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad bg-clip">
+  <div class='container d-flex justify-content-center'>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="text-black font-italic text-center mb-3 mb-md-5">Follow Along:</h2>
+        <div class="social-icons-lg txt-black">
+          <%= render_partial'components/social-icons' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

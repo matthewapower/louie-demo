@@ -1,0 +1,96 @@
+iframe {
+  border: none;
+  width: 100%;
+  font-family: "jaf-lapture", sans-serif!important;
+}
+
+label {
+  width: max-content!important;
+  display: inline-block!important;
+  font-family: "jaf-lapture", sans-serif!important;
+  font-size: 1.1rem!important;
+}
+
+button {
+  font-family: "jaf-lapture", sans-serif!important;
+}
+
+.fsBody .fsForm {
+  padding: 0!important;
+  margin-top: 0!important;
+}
+
+.fsLabel, .fsRequiredLabel, .fsRequired, .fsField, .fsSubmitButton {
+  font-family: "jaf-lapture", sans-serif!important;
+  font-size: 1.1rem!important;
+}
+
+.fsField {
+  background-color: $color_light-gray!important;
+  border: none!important;
+  padding-left: 10px!important;
+}
+
+.fsForm input:focus, .fsForm select:focus, .fsForm textarea:focus {
+  box-shadow: none!important;
+}
+
+.fsSubmit .fsSubmitButton {
+  border-radius: 25px!important;
+  padding: 15px 40px;
+  font-size: 1.1rem!important;
+}
+
+#fsCell47452609 {
+  padding: 30px 60px!important;
+  background-color: $color_light-gray!important;
+  text-align: center;
+}
+
+.fsOptionLabel .vertical {
+  padding: 0!important;
+  margin: 0 20px!important;
+  &:before {
+    margin-bottom: 7px!important;
+  }
+}
+
+.fsRowBody input[type=checkbox], .fsRowBody input[type=radio] {
+  background-color: $color_light-gray!important;
+  border-radius: 8px!important;
+  border: 1px solid black!important;
+  &:checked {
+    border: none!important;
+    background-color: none!important;
+    margin-bottom: 7px!important;
+  }
+}
+
+.fsBody .fsSupporting {
+  margin-top: 12px!important;
+  font-size: 0.8rem!important;
+}
+
+.fsSubmitButton {
+  font-size: 1.1rem !important;
+  font-family: "jaf-lapture", sans-serif!important;
+  color: $color_white !important;
+  border-radius: 20px !important;
+  padding: 10px 40px;
+}
+
+.reportAbuse {
+    display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+  label.fsOptionLabel {
+    border: none!important;
+    background-color: $color_light-gray!important;
+  }
+
+  .fsOptionLabel .vertical {
+    margin: 0 5px!important;
+  }
+}

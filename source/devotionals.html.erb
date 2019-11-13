@@ -1,0 +1,29 @@
+---
+title: Devotionals
+---
+<section class="section section-bg-img section-pad section-pad-lg bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path data.pages.devotionals.header.image %>)">
+  <div class='container'>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h1 txt-white text-center"><%= data.pages.devotionals.header.title %></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad section-pad-sm bg-clip chevron-offset-border-dbl">
+  <div class='container text-center'>
+    <div class="row">
+      <div class="col-md-10 offset-md-1 text-left">
+        <% data.pages.devotionals.devos.each do | e | %>
+          <div class="mb-5 d-flex flex-column align-items-center">
+            <%= image_tag e.image, class: 'mb-5 w-100' %>
+            <h2 class="text-left text-black mb-3 w-100"><%= e.title %></h2>
+            <p class="text-left text-black mb-3"><%= e.body %></p>
+            <%= e.form_embed %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

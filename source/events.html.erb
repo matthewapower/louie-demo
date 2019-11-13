@@ -1,0 +1,28 @@
+---
+title: Events
+---
+
+<section class="section section-bg-img section-pad section-pad-lg bg-clip bg-clip-inverse chevron-offset-border" style="background-image: url(<%= image_path data.pages.events.header.image %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h1 txt-white"><%= data.pages.events.header.title %></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad section-pad-lg bg-clip chevron-offset-border-dbl">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="h2 txt-black text-center font-italic mb-5"><%= data.pages.events.body %></h2>
+      </div>
+      <div class="col-md-12">
+        <% data.pages.events.events.each do | event | %>
+          <a class="d-block mb-5 text-center" href="<%= event.url %>" target="_blank"><img src="<%= image_path event.image %>"></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

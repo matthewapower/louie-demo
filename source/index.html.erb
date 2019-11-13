@@ -1,0 +1,94 @@
+---
+title: Louie Giglio
+AltNav: true
+---
+<header class="header section-bg-img index-hero chevron-offset-border" style="background-image:url(<%= image_path(data.pages.home.hero.image) %>)">
+  <div class="container-fluid">
+    <div class="row justify-content-between flex-column">
+      <div class="col-12 col-md-4">
+        <h1 class="text-white h2 mobile-hide">
+          <%= data.pages.home.hero.title %>
+        </h1>
+      </div>
+      <div class="col-12 col-md-4 mini-carousel-bottom-left">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <% data.pages.home.hero.slides.each do | slide | %>
+                <li class="glide__slide">
+                  <a class="text-white d-flex align-items-center justify-content-center btn-mini-carousel" href="<%= slide.link_url %>">
+                    <span class="col-6">
+                      <%= image_tag slide.image %>
+                    </span>
+                    <span class="col-6">
+                      <%= slide.title %>
+                    </span>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <% data.pages.home.hero.slides.each_with_index do | slide, index | %>
+              <button class="glide__bullet mx-1" data-glide-dir="=<%= index %>"></button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section-pad bg-clip chevron-offset-border chevron-offset-border-inv">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9">
+        <p class="text-center"><%= data.pages.home.bio %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad section-bg-img bg-clip bg-clip-inverse bg-clip-overlap chevron-offset-border" style="background-image: url(images/header-img.jpg)">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 mb-5">
+        <div class="offset-border mb-5">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item iframe-main responsive-youtube" src="https://www.youtube.com/embed/<%= data.pages.home.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="glide offset-border">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <% data.pages.home.featured_carousel.slides.each do | slide | %>
+                <li class="glide__slide"><a href="<%= slide.linkUrl %>"><%= image_tag slide.image %></a></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="glide__bullets glide__bullets--dark" data-glide-el="controls[nav]">
+            <% data.pages.home.hero.slides.each_with_index do | slide, index | %>
+              <button class="glide__bullet mx-1 glide__bullets-lowered" data-glide-dir="=<%= index %>"></button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad bg-clip">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h1 class="mb-3"><%= data.pages.home.stay_updated.title %></h1>
+        <p><%= data.pages.home.stay_updated.body %></p>
+      </div>
+      <div class="col-md-10">
+        <%= data.pages.home.stay_updated.embed %>
+      </div>
+    </div>
+  </div>
+</section>

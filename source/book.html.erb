@@ -1,0 +1,53 @@
+---
+title: Book
+---
+
+<section class="section section-bg-img section-pad bg-clip bg-clip-inverse bg-clip-overlap-diamond chevron-offset-border" style="background-image: url(<%= image_path book.header.bg_image %>)">
+  <div class='container d-flex justify-content-center'>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <%= image_tag book.header.image %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad section-pad-lg bg-clip">
+  <div class='container d-flex justify-content-center'>
+    <div class="row">
+      <article class="col-md-8 col-12 p-5">
+        <h1 class="mb-5"><%= book.header.title %></h1>
+        <div class="embed-responsive embed-responsive-16by9 mb-5">
+          <iframe class="embed-responsive-item responsive-youtube" src="https://www.youtube.com/embed/<%= book.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <%= book.body %>
+        <a href="#" class="btn btn-outline btn-txt-red mr-md-4 mb-4 w-sm-100">Study materials</a>
+        <a href="#" class="btn btn-outline btn-txt-red mb-4 w-sm-100">Free materials</a>
+      </article>
+      <aside class="col-md-4 col-12 p-5 border-left d-flex flex-column flex-md-column-reverse justify-content-md-end">
+        <div id="quotes">
+          <% book.quotes.each do | q | %>
+            <blockquote>
+              <p class="txt-black quote"><%= q.body %></p>
+              <h2 class="txt-black quote-author"><%= q.author %></h2>
+              <p class="txt-black quote-author-title"><%= q.author_title %></p>
+            </blockquote>
+          <% end %>
+        </div>
+        <div class="btn-wrapper mb-5">
+          <a href="#" class="btn btn-bg-red mb-3">Sample Chapter</a>
+          <div class="dropdown-wrapper">
+            <a href="#" id="dropdownTrigger" class="btn btn-bg-red btn-block">Buy Now</a>
+            <ul class="dropdown list-unstyled">
+              <li><a class="txt-black" href="#">Amazon</a></li>
+              <li><a class="txt-black" href="#">Barnes & Noble</a></li>
+              <li><a class="txt-black" href="#">Books-A-Million</a></li>
+              <li><a class="txt-black" href="#">Christian Book Distributors</a></li>
+              <li><a class="txt-black" href="#">Barnes & Noble</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

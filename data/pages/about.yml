@@ -1,0 +1,12 @@
+header:
+  title:
+  image: "/images/header-img.jpg"
+bio: <span>Louie Giglio</span> is Pastor of <span>Passion City Church</span> and the Founder of the </br>Passion movement, which exists to call a generation to leverage their lives </br>for the fame of <span>Jesus</span>.
+body: >-
+  <p class="text-center txt-white mb-3">Since 1997, Passion has gathered collegiate-aged young people in events across the US and around the world. Notably, in 2017, more than 55,000 students gathered for Passion 2017 in Atlanta’s Georgia Dome for one of the largest Jesus-focused collegiate events in history.</p><p class="text-center txt-white mb-3">Each year, Passion continues to see 18-25 year olds fill venues across the nation in pursuit of lives lived for God's glory. In addition to the collegiate gatherings of <a href="#">Passion Conferences</a>, Louie and his wife Shelley lead the teams at <a href="#">Passion City Church</a>, <a href="#">sixstepsrecords</a> and the <a href="#">Passion Global Institute</a>. Louie is the author of national-bestseller <a href="#">Goliath Must Fall</a>, <a href="#">The Comeback</a>, <a href="#">The Air I Breathe</a>, <a href="#">I Am Not But I Know I Am</a>, and <a href="#">Indescribable: 100 Devotions About God & Science</a>, his first children's book.</p><p class="text-center txt-white mb-3"><a href="#">Louie</a> and <a href="#">Shelley</a> make their home in Atlanta, Georgia.</p>
+logos:
+  - {image: '/images/passion-logo.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: '/images/passion-logo.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: '/images/passion-logo.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: '/images/passion-logo.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: '/images/passion-logo.jpg', url: 'https://passioncitychurch.com/'}

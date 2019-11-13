@@ -1,0 +1,44 @@
+---
+title: Messages
+---
+
+<section class="section section-bg-img section-pad section-pad-lg bg-clip bg-clip-inverse bg-clip-overlap  bg-clip-overlap-video chevron-offset-border" style="background-image: url(/images/header-img.jpg)">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= message.youtube_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2 class="text-black mt-4"><%= message.title %></h2>
+        <p class="p-small"><%= message.body %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad section-pad-lg bg-clip bg-clip-video-index chevron-offset-border">
+  <div class='container'>
+    <div class="row">
+      <% data.messages.each do | message | %>
+        <div class="col-md-4 mb-3">
+          <a class="hover-filter" href="<%= "/messages/#{message[0].parameterize }" %>">
+            <div class="messages-wrapper">
+              <p><%= message[1].date %></p>
+              <%= image_tag message[1].image, class: 'mb-3' %>
+            </div>
+            <h2 class="text-black"><%= message[1].title %></h2>
+            <p class="p-small"><%= message[1].body %></p>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="section section-bg-img section-pad section-pad-lg bg-clip" style="background-image: url(/images/header-img.jpg)">
+  <div class='container'>
+    <div class="row justify-content-center">
+      <a href="#" target="_blank" class="btn btn-white">More Messages</a>
+    </div>
+  </div>
+</section>

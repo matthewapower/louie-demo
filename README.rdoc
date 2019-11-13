@@ -1,0 +1,9 @@
+== README
+
+[Deployment instructions:]
+1.  $ git clone https://github.com/PolarNotion/louie_giglio.git
+2.  $ cd louie_giglio
+4.  $ bundle install
+5.  $ bundle exec middleman server
+6.  You'll be given a link to view your site
+    Example: View your site at "https://localhost:4567", "https://127.0.0.1:4567"

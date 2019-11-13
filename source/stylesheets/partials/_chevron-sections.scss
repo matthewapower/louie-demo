@@ -1,0 +1,227 @@
+@supports( -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) ) {
+
+  $clip_height: 15vh;
+  $clip_padding: 5vh;
+  $clip_overlap: 70vh;
+  $clip_border: calc(15vh - 2px);
+
+  :root {
+    --clip-height: 15vh;
+    --clip-padding: 5vh;
+    --clip-border: calc(15vh - 1px);
+  }
+
+  nav {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $color_black;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0 - $clip_height;
+      z-index: -1;
+    }
+  }
+
+  .alt-nav nav {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  footer .bg-clip,
+  footer .bg-clip:first-child {
+    margin-top: calc(var(--clip-height) * -1);
+    padding-bottom: $clip_height / 2;
+  }
+
+  .bg-clip {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% $clip_height);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% $clip_height);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% var(--clip-height));
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% var(--clip-height));
+    margin-top: calc(var(--clip-height) * -1);
+    padding: calc(var(--clip-height) + var(--clip-padding)) 0;
+    background-size: cover;
+    background-color: $color_white;
+    z-index: 1;
+    position: relative;
+  }
+
+  .bg-clip-overlap {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: $clip_overlap;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% $clip_height);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% var(--clip-height));
+      z-index: -1;
+    }
+  }
+
+  .bg-clip-overlap-diamond {
+    position: relative;
+    padding-top: $clip_padding;
+    padding-bottom: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: $clip_height;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% $clip_height);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 50% var(--clip-height));
+      z-index: -1;
+    }
+  }
+
+  .bg-clip-inverse {
+    clip-path: polygon(100% $clip_height, 100% 100%, 0 100%, 0 $clip_height, 50% 0);
+    -webkit-clip-path: polygon(100% $clip_height, 100% 100%, 0 100%, 0 $clip_height, 50% 0);
+    clip-path: polygon(100% var(--clip-height), 100% 100%, 0 100%, 0 var(--clip-height), 50% 0);
+    -webkit-clip-path: polygon(100% var(--clip-height), 100% 100%, 0 100%, 0 var(--clip-height), 50% 0);
+  }
+
+  .bg-clip:first-child {
+    margin-top: -10px;
+  }
+
+  .chevron-offset-border {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: $color_orange;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      height: $clip_height;
+      height: var(--clip-height);
+      width: 100%;
+      clip-path: polygon(100% 0, 100% 1px, 50% $clip_height, 0 1px, 0 0, 50% $clip_border);
+      -webkit-clip-path: polygon(100% 0, 100% 1px, 50% $clip_height, 0 1px, 0 0, 50% $clip_border);
+      clip-path: polygon(100% 0, 100% 1px, 50% var(--clip-height), 0 1px, 0 0, 50% var(--clip-border));
+      -webkit-clip-path: polygon(100% 0, 100% 1px, 50% var(--clip-height), 0 1px, 0 0, 50% var(--clip-border));
+    }
+
+    &.bg-clip-overlap:before {
+      bottom: 50vh;
+    }
+
+    &.bg-clip-overlap-diamond:before {
+      bottom: 170px;
+    }
+
+    &.chevron-offset-border-inv:before {
+      clip-path: polygon(100% calc(100% - 1px), 100% 100%, 50% 1px, 0 100%, 0 calc(100% - 1px), 50% 0);
+      -webkit-clip-path: polygon(100% calc(100% - 1px), 100% 100%, 50% 1px, 0 100%, 0 calc(100% - 1px), 50% 0);
+    }
+  }
+
+  .chevron-offset-border-dbl {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      background-color: $color_orange;
+      position: absolute;
+      top: 400px;
+      left: 0;
+      height: var(--clip-height);
+      width: 100%;
+      clip-path: polygon(100% 0, 100% 1px, 50% $clip_height, 0 1px, 0 0, 50% $clip_border);
+      -webkit-clip-path: polygon(100% 0, 100% 1px, 50% $clip_height, 0 1px, 0 0, 50% $clip_border);
+      clip-path: polygon(100% 0, 100% 1px, 50% var(--clip-height), 0 1px, 0 0, 50% var(--clip-border));
+      -webkit-clip-path: polygon(100% 0, 100% 1px, 50% var(--clip-height), 0 1px, 0 0, 50% var(--clip-border));
+    }
+
+    &:after {
+      top: 420px;
+      z-index: -1;
+    }
+  }
+
+  .bg-clip-video-index {
+    padding-top: 0;
+    clip-path: none;
+  }
+
+  .bg-clip-overlap-video {
+    &:before {
+      top: 26%;
+    }
+
+    &:after {
+      height: 70%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .bg-clip-overlap-diamond {
+      position: relative;
+      padding: calc(var(--clip-height) * 0.6) 0 0;
+      min-height: calc(var( --clip-height) * 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chevron-offset-border.bg-clip-overlap-diamond:before {
+      bottom: 170px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --clip-height: 5vh;
+      --clip-border: calc(5vh - 1px);
+    }
+
+    .chevron-offset-border:before {
+      bottom: 3vh;
+    }
+
+    .bg-clip-overlap:after {
+      height: 25vh;
+    }
+
+    .chevron-offset-border.bg-clip-overlap:before {
+      bottom: 17vh;
+    }
+
+    .bg-clip:first-child {
+      margin-top: 0;
+    }
+
+    .bg-clip-overlap-video {
+      &:before {
+        top: 45%;
+      }
+
+      &:after {
+        height: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+header:
+  image: /images/header-img.jpg
+  title: Devotionals
+devos:
+  - {image: '/images/devotions-not-forsaken-img.jpg', title: 'Subtitle here about this study.', body: 'Join me on a 30-day journey toward freedom from the grip of this demoralizing, depleting giant, with brand new devotional content coming straight to your inbox. Sign-up today, and you’ll receive a confirmation email shortly.', form_embed: '<iframe src="https://lg-test.formstack.com/forms/devotional_form" title="Devotional Form" width="600" height="400"></iframe>'}
+  - {image: '/images/devotions-anxiety-img.jpg', title: 'Anxiety is Dead... But Its Still Deadly..', body: 'Join me on a 7-day journey toward freedom from the grip of this demoralizing, depleting giant, with brand new devotional content coming straight to your inbox. Sign-up today, and you’ll receive a confirmation email shortly.', form_embed: '<iframe src="https://lg-test.formstack.com/forms/devotional_form" title="Devotional Form" width="600" height="400"></iframe>'}

@@ -1,0 +1,36 @@
+hero:
+  image: /images/header-img.jpg
+  title: "Pastor.<br/>Author.<br/>Communicator.<br/>Door Holder."
+  slides:
+    - image: '/images/anxiety-glow.png'
+      title: |
+        Pre-Order<br/>
+        Louie's Newest<br/>
+        Book,<br/>
+        <em>Not Forsaken</em>
+      link_url: 'https://passioncitychurch.com/'
+    - image: '/images/anxiety-glow.png'
+      title: |
+        Pre-Order<br/>
+        Louie's Newest<br/>
+        Book,<br/>
+        <em>Not Forsaken</em>
+      link_url: 'https://passioncitychurch.com/'
+    - image: '/images/anxiety-glow.png'
+      title: |
+        Pre-Order<br/>
+        Louie's Newest<br/>
+        Book,<br/>
+        <em>Not Forsaken</em>
+      link_url: 'https://passioncitychurch.com/'
+bio: "Louie is the <span>Visionary Architect </span>and <span>Director </span>of the Passion Movement, comprised of Passion Conferences, Passion City Church, Passion Publishing and sixstepsrecords, and the <span>founder </span>of Passion Global Institute."
+youtube_id: nCjIJlHosyE
+featured_carousel:
+  slides:
+    - {image: '/images/header-img.jpg', link_url: 'https://passioncitychurch.com/'}
+    - {image: '/images/header-img.jpg', link_url: 'https://passioncitychurch.com/'}
+    - {image: '/images/header-img.jpg', link_url: 'https://passioncitychurch.com/'}
+stay_updated:
+  title: Stay Updated
+  body: Join Louie’s mailing list to receive information about special announcements and promotions.
+  embed: <script type="text/javascript" src="https://lg-test.formstack.com/forms/js.php/test_lg_contact"></script><noscript><a href="https://lg-test.formstack.com/forms/test_lg_contact" title="Online Form">Online Form - Test LG Contact</a></noscript><div style="text-align:right; font-size:x-small;"><a href="https://www.formstack.com?utm_source=jsembed&utm_medium=product&utm_campaign=product+branding&fa=h,3499265" title="Powered by Formstack">Powered by Formstack</a></div>

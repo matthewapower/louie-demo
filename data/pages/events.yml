@@ -1,0 +1,10 @@
+header:
+  image: /images/header-img.jpg
+  title: Upcoming Passion Events
+body: yes, lord, walking in the way of your truth, we wait for you; for your name and your renown are the desire of our souls. —isaiah 26:8
+events:
+  - {image: 'images/featured-events-passion-2020.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: 'images/featured-events-collective.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: 'images/featured-events-passion-city-church.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: 'images/featured-events-passion-2020.jpg', url: 'https://passioncitychurch.com/'}
+  - {image: 'images/featured-events-collective.jpg', url: 'https://passioncitychurch.com/'}

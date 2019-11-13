@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <%= link_to 'Louie Giglio', '/', class: 'navbar-brand'%>
+  <a class="navbar-trigger hamburger" href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <div class="social-icon-wrapper txt-white mobile-hide">
+    <%= render_partial 'components/social-icons' %>
+  </div>
+  <ul class="navbar-menu d-flex flex-column list-unstyled align-items-center align-items-md-start">
+    <li><%= link_to 'Home', '/', class: 'txt-white btn-link'%></li>
+    <li><%= link_to 'About', '/about.html', class: 'txt-white btn-link'%></li>
+    <li class="subnav-trigger">
+      <%= link_to 'Books', '/books.html', class: 'txt-white btn-link'%>
+      <ul class="subnav list-unstyled">
+        <% data.featured_books.each_with_index do | book, index | %>
+          <li><%= link_to book[1].header.title, '/books/' + book[0].parameterize + '/' %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li><%= link_to 'Events', '/events.html', class: 'txt-white btn-link'%></li>
+    <li><%= link_to 'Messages', "/messages/#{ data.messages.first[0] }", class: 'txt-white btn-link'%></li>
+    <li><%= link_to 'Devotionals', '/devotionals.html', class: 'txt-white btn-link'%></li>
+    <li><%= link_to 'Contact', '/contact.html', class: 'txt-white btn-link'%></li>
+    <li><%= link_to 'TV', '/tv.html', class: 'txt-white btn-link'%></li>
+  </ul>
+</nav>
